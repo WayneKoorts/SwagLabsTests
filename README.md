@@ -1,4 +1,6 @@
-# SwagLabsTests
+# Swag Labs Tests
+
+[![Tests](https://github.com/WayneKoorts/SwagLabsTests/actions/workflows/tests.yml/badge.svg)](https://github.com/WayneKoorts/SwagLabsTests/actions/workflows/tests.yml)
 
 Playwright-based UI tests for [Swag Labs](https://www.saucedemo.com/) using NUnit and .NET.
 
