@@ -60,3 +60,13 @@ To see the browser while tests run, uncomment `HEADED=1` in your `.env` file, or
 ```bash
 HEADED=1 dotnet test src/SwagLabsTests.sln
 ```
+
+### Slow Motion
+
+To slow down each Playwright action (useful for watching tests in headed mode), pass `SlowMo` via the `--` runsettings override:
+
+```bash
+HEADED=1 dotnet test src/SwagLabsTests.sln -- Playwright.LaunchOptions.SlowMo=1500
+```
+
+The value is in milliseconds.

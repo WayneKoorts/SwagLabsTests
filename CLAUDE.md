@@ -53,6 +53,7 @@ pwsh src/SwagLabsTests/bin/Debug/net10.0/playwright.ps1 install
 - Tests use `[Parallelizable(ParallelScope.Self)]` for parallel execution
 - Browser configuration is in `src/SwagLabsTests/.runsettings` (default: Chromium). Override via CLI: `-- Playwright.BrowserName=firefox`
 - Helper scripts `run-tests.sh` / `run-tests.ps1` run tests against all supported browsers (Chromium, Firefox, WebKit)
+- Shared values (e.g. base URL) live in `Constants.cs` — use these instead of hardcoding
 
 ## Coding Guidelines
 
