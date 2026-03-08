@@ -55,6 +55,21 @@ Run a specific test:
 dotnet test src/SwagLabsTests.sln --filter "HomePageShowsLoginForm"
 ```
 
+### Cross-Browser Testing
+
+Run tests against a specific browser (default is Chromium):
+
+```bash
+dotnet test src/SwagLabsTests.sln -- Playwright.BrowserName=firefox
+```
+
+Run tests against all supported browsers (Chromium, Firefox, WebKit):
+
+```bash
+./run-tests.sh        # Bash
+./run-tests.ps1       # PowerShell
+```
+
 ### Headed Mode
 
 To see the browser while tests run, uncomment `HEADED=1` in your `.env` file, or pass it inline:
