@@ -7,3 +7,6 @@ obj/
 
 ## Environment
 .env
+
+## Claude Code
+.claude/
