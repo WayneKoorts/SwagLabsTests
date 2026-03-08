@@ -2,16 +2,8 @@ namespace SwagLabsTests;
 
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
-public class LoginTests : PageTest
+public class LoginTests : AuthenticatedPageTest
 {
-    private async Task LoginAsync(string username, string password)
-    {
-        await Page.GotoAsync(Constants.BaseUrl);
-        await Page.Locator("#user-name").FillAsync(username);
-        await Page.Locator("#password").FillAsync(password);
-        await Page.Locator("#login-button").ClickAsync();
-    }
-
     [Test]
     public async Task ValidLoginNavigatesToInventoryPage()
     {
