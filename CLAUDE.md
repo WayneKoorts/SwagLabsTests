@@ -23,6 +23,17 @@ Run a specific test by name:
 dotnet test src/SwagLabsTests.sln --filter "HomePageShowsLoginForm"
 ```
 
+Run tests with a specific browser:
+```bash
+dotnet test src/SwagLabsTests.sln -- Playwright.BrowserName=firefox
+```
+
+Run all supported browsers:
+```bash
+./run-tests.sh        # Bash
+./run-tests.ps1       # PowerShell
+```
+
 Run tests with detailed output:
 ```bash
 dotnet test src/SwagLabsTests.sln --logger "console;verbosity=detailed"
@@ -40,6 +51,8 @@ pwsh src/SwagLabsTests/bin/Debug/net10.0/playwright.ps1 install
 - Test classes extend `PageTest` (from `Microsoft.Playwright.NUnit`), which handles browser/page lifecycle
 - Global usings are configured in the `.csproj` via `<Using>` items: `Microsoft.Playwright.NUnit`, `NUnit.Framework`, `System.Text.RegularExpressions`, `System.Threading.Tasks`
 - Tests use `[Parallelizable(ParallelScope.Self)]` for parallel execution
+- Browser configuration is in `src/SwagLabsTests/.runsettings` (default: Chromium). Override via CLI: `-- Playwright.BrowserName=firefox`
+- Helper scripts `run-tests.sh` / `run-tests.ps1` run tests against all supported browsers (Chromium, Firefox, WebKit)
 
 ## Coding Guidelines
 
